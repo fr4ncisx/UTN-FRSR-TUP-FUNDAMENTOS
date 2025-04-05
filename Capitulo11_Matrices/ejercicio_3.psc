@@ -10,11 +10,11 @@ Proceso Matrices
 	Dimensionar matriz(4,4);
 	Dimensionar suma_fila(4), suma_columna(4);
 	// agregamos numeros al azar en la matriz
+	// primero empieza a rellenar las columnas (j) y despues continua con la proxima fila (i)
 	Para i<-0 Hasta 3 Con Paso 1 Hacer
-		// primero empieza a rellenar las columnas (j) y despues continua con la proxima fila (i)
 		Para j<-0 Hasta 3 Con Paso 1 Hacer
-			matriz[i,j]<-Aleatorio(1,1000);
-		FinPara // agregamos numeros al azar hasta num 1000
+			matriz[i,j]<-Aleatorio(1,1000); // agregamos numeros al azar hasta num 1000
+		FinPara
 	FinPara
 	// inicializamos cada indice del arreglo con 0
 	Para i<-0 Hasta 3 Hacer
@@ -23,9 +23,9 @@ Proceso Matrices
 	FinPara
 	Para i<-0 Hasta 3 Con Paso 1 Hacer
 		Para j<-0 Hasta 3 Con Paso 1 Hacer
-			suma_fila[i] <- suma_fila[i]+matriz[i,j];
-			suma_columna[j] <- suma_columna[j]+matriz[i,j]; // sumamos filas
-		FinPara // sumamos columns
+			suma_fila[i] <- suma_fila[i]+matriz[i,j]; // sumamos filas
+			suma_columna[j] <- suma_columna[j]+matriz[i,j]; // sumamos columns
+		FinPara
 	FinPara
 	// imprimimos por consola la vista de la matriz
 	Escribir 'Vista general Matriz 4x4';
